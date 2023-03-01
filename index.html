@@ -6,12 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero shop </title>
+    <button id="myBtn" title="Lên đầu trang"><img src='len.png' title='lên đầu trang' width='14px'/></button>
+<script>
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+ 
+if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+document.getElementById("myBtn").style.display = "block";
+} else {
+document.getElementById("myBtn").style.display = "none";
+}
+}
+ 
+document.getElementById('myBtn').addEventListener("click", function(){
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+});
+</script>
     <style type="text/css">
         * {
             margin: 0;
             padding: 0;
         }
-
+/* Mui ten lên dau trang */
+#myBtn {
+display: none;
+position: fixed;
+bottom: 60px;
+right: 10px;
+z-index: 99;
+border: none;
+outline: none;
+background-color: #fff;
+border: 2px solid #ccc;
+color: white;
+cursor: pointer;
+border-radius: 30px;
+opacity: 0.7;
+}
+ 
+#myBtn:hover {
+background-color: #f1f1f1;
+}
 
         .header {
             background-color: dimgrey;
