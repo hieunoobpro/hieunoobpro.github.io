@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Màn hình </title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Mui ten lên dau trang */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 60px;
+            right: 10px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            color: white;
+            cursor: pointer;
+            border-radius: 30px;
+            opacity: 0.7;
+        }
+
+        #myBtn:hover {
+            background-color: #f1f1f1;
+        }
+
+        .header {
+            background-color: dimgrey;
+            color: chartreuse;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 30px;
+            text-align: center;
+            color: rgb(88, 8, 78)
+        }
+
+        h2 {
+            text-align: center;
+            color: brown;
+            margin: 10px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .footer {
+            background-color: #F1F1F1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* tạo kiểu cho liên kết */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* thay đổi màu khi di chuột */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        body {
+            background-color: rgb(147, 152, 228);
+        }
+
+        .text-centre {
+            text-align: center;
+        }
+
+        .accordion-header {
+            background-color: #F1F1F1;
+            padding: 10px 10px;
+            margin-bottom: 10px;
+        }
+
+        .accordion-body {
+            background-color: #f2f2f2;
+            display: none;
+        }
+
+        #wrapper {
+            max-width: 960px;
+            margin: 0%auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="text-centre">
+            <font face="Arial" size="5">
+                <div class="header">
+                    <h1>
+                        Hero shop
+                    </h1>
+                </div>
+                <div class="topnav">
+                    <a href="/index.html">Trang chủ </a>
+                    <a href="/chuot.html">Chuột </a>
+                    <a href="/ban-phim.html">Bàn phím</a>
+                    <a href="/man-hinh.html">Màn hình</a>
+                    <a href="/thung-may.html">Thùng máy </a>
+                    <a href="/tai-nghe.html">Tai nghe</a>
+
+                </div>
+
+                <h1 style="color: chocolate; background-color: rgb(107, 63, 5); width: auto;margin: auto ">
+                    Cung cấp sản phẩm điện tử chất lượng
+                </h1>
+                <h1>
+                    Màn hình máy tính
+                </h1>
+                <img src="https://cdn.tgdd.vn/Products/Images/5697/271550/asus-lcd-tuf-gaming-27-inch-fullhd-165hz-1ms-vg279q1a-thumb-600x600.jpg"
+                    width="500" height="400" alt="khong tim thay anh">
+                <img src="data:image/jpeg;base64,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"
+                    width="500" height="400" alt="khong tim thay anh">
+                <h2>
+                    Màn Asus TUF Gaming VG279Q1A 27 inch Full HD
+                </h2>
+                <hr />
+                <h2>
+                    Giá: 5.559.000 Đ
+                </h2>
+                <b>
+                    Đặc điểm nổi bật
+                </b>
+                <ul>
+                    <li>
+                        Màn hình chơi game IPS 27 inch Full HD (1920x1080) với tốc độ làm mới 165Hz được thiết kế
+                        cho game thủ và các tựa game nhập vai
+                    </li>
+                    <li>
+                        Công nghệ Extreme Low Motion Blur (ELMB ™) của ASUS cho phép thời gian đáp ứng là 1ms (MPRT)
+                        cùng với công nghệ Adaptive-sync, giúp loại bỏ hiện tưởng bóng mờ và xé hình với những hình
+                        ảnh trong game sắc nét có tốc độ khung hình cực cao.
+                    </li>
+                    <li>
+                        Được trang bị công nghệ FreeSync™ để loại bỏ hiện tượng xé hình và trồi sụt tốc độ khung
+                        hình
+                    </li>
+                    <li>
+                        Hỗ trợ cùng lúc Adaptive-Sync với card đồ họa NVIDIA GeForce và FreeSync với card đồ họa AMD
+                        Radeon. *Tương thích cho tất cả các dòng card đồ họa NVIDIA GeForce GTX 10 series, GTX 16
+                        series, RTX 20 series và các dòng cao hơn.
+                    </li>
+                    <li>
+                        Shadow Boost tăng cường chi tiết hình ảnh trong các vùng tối, làm sáng vùng tối mà không gây
+                        cháy sáng các vùng sáng hơn
+                    </li>
+                    <li>
+                        Đầu ra Full HD(1920 X 1080)@ 120Hz trên PS5 & Xbox Series X/S
+                    </li>
+                </ul>
+            </font>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="footer">
+        <p>Trang web trực tiếp của Hero shop
+        </p>
+        <p>Bản Demo
+        </p>
+
+    </div>
+</body>
+
+</html>
