@@ -4,4 +4,4 @@ my website
 ### Click on one of the links below to access my homework solution:  
 
 [Homework 2](https://hieunoobpro.github.io)  
-[Homework 3](https://khanh7516.github.io/bai-tap-ve-nha-03/)
+[Homework 3](https://hieunoobpro.github.io/28.2.2023/)
