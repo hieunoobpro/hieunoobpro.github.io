@@ -5,32 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     <title>Thùng máy </title>
     <style type="text/css">
-              * {
+        * {
             margin: 0;
             padding: 0;
         }
-/* Mui ten lên dau trang */
-#myBtn {
-display: none;
-position: fixed;
-bottom: 60px;
-right: 10px;
-z-index: 99;
-border: none;
-outline: none;
-background-color: #fff;
-border: 2px solid #ccc;
-color: white;
-cursor: pointer;
-border-radius: 30px;
-opacity: 0.7;
-}
- 
-#myBtn:hover {
-background-color: #f1f1f1;
-}
+
+        /* Mui ten lên dau trang */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 60px;
+            right: 10px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            color: white;
+            cursor: pointer;
+            border-radius: 30px;
+            opacity: 0.7;
+        }
+
+        #myBtn:hover {
+            background-color: #f1f1f1;
+        }
 
         .header {
             background-color: dimgrey;
@@ -42,7 +44,7 @@ background-color: #f1f1f1;
         h1 {
             margin: 30px;
             text-align: center;
-            color: rgb(88, 8, 78)
+            color: rgb(238, 232, 237)
         }
 
         h2 {
@@ -77,8 +79,9 @@ background-color: #f1f1f1;
             background-color: #ddd;
             color: black;
         }
+
         body {
-            background-color: rgb(147, 152, 228);
+            background-image: url("/background.jpg");
         }
 
         .text-centre {
@@ -119,6 +122,7 @@ background-color: #f1f1f1;
                     <a href="/man-hinh.html">Màn hình</a>
                     <a href="/thung-may.html">Thùng máy </a>
                     <a href="/tai-nghe.html">Tai nghe</a>
+                    <a href="/loa.html">Loa</a>
 
                 </div>
 
@@ -126,67 +130,67 @@ background-color: #f1f1f1;
                     Cung cấp sản phẩm điện tử chất lượng
                 </h1>
                 <div class="accordion-header">
-                        <h1>
-                            Thùng máy tính
-                        </h1>
-                        <div class="accordion-body">
-                        </div>
-                    </div>
-                    <img
-                        src="data:image/jpeg;base64,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"
+                    <h1>
+                        Thùng máy tính
+                    </h1>
+                    <img src="data:image/jpeg;base64,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"
                         width="500" height="400" alt="khong tim thay anh">
-                    <img src="https://hoanglongcomputer.vn/media/product/250-1321-anhxeon1.png" width="500"
-                        height="400" alt="khong tim thay anh">
+                    <img src="https://hoanglongcomputer.vn/media/product/250-1321-anhxeon1.png" width="500" height="400"
+                        alt="khong tim thay anh">
                     <h2>
-                         XEON 2689 V1 | RAM 32G | RX 550 4G(17 Acc VLTK)
+                        XEON 2689 V1 | RAM 32G | RX 550 4G(17 Acc VLTK)
                     </h2>
-                    <hr/> 
+                    <hr />
                     <h2>
                         Giá: 8.440.000 Đ
                     </h2>
                     <b>
                         Đặc điểm nổi bật
                     </b>
-                    <p>
-                        PC GIẢ LẬP XEON 2689 V1| RAM 32G| GT 1030 2G là PC chạy giả lập giá rẻ được tối ưu để phục vụ
-                        cho nhu cầu làm việc cũng như hướng tới đối tượng cần mở nhiều tab Noxplayer, Ldplayer,
-                        bluestacks,...
-                    </p>
-                    <ul>
-                        <b>
-                            Linh kiện:
-                        </b>
-                        <li>
-                            Mainboard HUANANZHI. X79 4M v3.0 LGA2011, hỗ trợ DDR3 non-ECC ram - Bảo hành 6 tháng
-                        </li>
-                        <li>
-                            INTEL XEON E5-2689 V1. (20M, 2.6GHZ TURBO 3.6GHZ) CORE 8/16 (SOCKET 2011 V1) TRAY
-                        </li>
-                        <li>
-                            TẢN NHIỆT CPU COOLER MASTER T400I
-                        </li>
-                        <li>
-                            Ổ cứng SSD Apacer AS2280P4 256GB PCIe NVMe 3x4 (Đọc 2100Mb/s - Ghi 1300Mb/s) -
-                            (AP256GAS2280P4-1)
-                        </li>
-                        <li>
-                            RAM DDR3 ECC SAMSUNG/HYNIX 16G 1600 ECC REGISTERED
-                        </li>
-                        <li>
-                            Card đồ họa Afox Radeon RX550 4GB
-                        </li>
-                        <li>
-                            VỎ MÁY TÍNH VITRA G5 ( Sẵn 3 FAN LED RGB )
-                        </li>
-                        <li>
-                            TÍNH Nguồn máy tính AIGO VK550 - 500W (Màu Đen)
-                        </li>
-                    </ul>
-                </font>
-            </div>
+                    <div style="text-align: left;">
+                        <p>
+                            PC GIẢ LẬP XEON 2689 V1| RAM 32G| GT 1030 2G là PC chạy giả lập giá rẻ được tối ưu để phục
+                            vụ
+                            cho nhu cầu làm việc cũng như hướng tới đối tượng cần mở nhiều tab Noxplayer, Ldplayer,
+                            bluestacks,...
+                        </p>
+                        <ul>
+                            <b>
+                                Linh kiện:
+                            </b>
+                            <li>
+                                Mainboard HUANANZHI. X79 4M v3.0 LGA2011, hỗ trợ DDR3 non-ECC ram - Bảo hành 6 tháng
+                            </li>
+                            <li>
+                                INTEL XEON E5-2689 V1. (20M, 2.6GHZ TURBO 3.6GHZ) CORE 8/16 (SOCKET 2011 V1) TRAY
+                            </li>
+                            <li>
+                                TẢN NHIỆT CPU COOLER MASTER T400I
+                            </li>
+                            <li>
+                                Ổ cứng SSD Apacer AS2280P4 256GB PCIe NVMe 3x4 (Đọc 2100Mb/s - Ghi 1300Mb/s) -
+                                (AP256GAS2280P4-1)
+                            </li>
+                            <li>
+                                RAM DDR3 ECC SAMSUNG/HYNIX 16G 1600 ECC REGISTERED
+                            </li>
+                            <li>
+                                Card đồ họa Afox Radeon RX550 4GB
+                            </li>
+                            <li>
+                                VỎ MÁY TÍNH VITRA G5 ( Sẵn 3 FAN LED RGB )
+                            </li>
+                            <li>
+                                TÍNH Nguồn máy tính AIGO VK550 - 500W (Màu Đen)
+                            </li>
+                        </ul>
+                    </div>
+            </font>
         </div>
     </div>
-</div>
+    </div>
+    </div>
+    </div>
     <div class="footer">
         <p>Trang web trực tiếp của Hero shop
         </p>
