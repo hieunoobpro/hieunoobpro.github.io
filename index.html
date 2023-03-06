@@ -27,13 +27,19 @@
         h1 {
             margin: 30px;
             text-align: center;
-            color: rgb(248, 244, 248)
+            color: #F1F1F1;
         }
-
+        @keyframes doimau{
+50%{
+    color: aqua;
+    background-color: bisque;
+}
+        }
         h2 {
             text-align: center;
             color: brown;
-            margin: 10px;
+            background-color: cornflowerblue;
+            animation: doimau 3s ease infinite;
         }
 
         .topnav {
@@ -104,12 +110,11 @@
         
             /* cỡ zoom khi di chuột vào */
         }
-
+    
         .thu-nghiem-zoom {
             overflow: hidden;
             opacity: 0.8;
         }
-        
         </style>
 </head>
 
@@ -132,9 +137,9 @@
 
             </div>
 
-            <h1 style="color: chocolate; background-color: rgb(107, 63, 5); width: auto;margin: auto ">
+            <h2>
                 Cung cấp sản phẩm điện tử chất lượng
-            </h1>
+            </h2>
             <hr />
             <div class="danhangngang">
                 <div class="accordion-header">
