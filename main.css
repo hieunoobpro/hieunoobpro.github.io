@@ -26,14 +26,14 @@ body{
 .header {
     background-color: dimgrey;
     color: chartreuse;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
     margin: 0 ;
 }
 .vitrimenu{
     position: absolute;
     left: 0;
-    top:104px;
+    top:168px;
 }
 #menu ul {
     background: #0fbd03;
@@ -93,6 +93,7 @@ body{
 }
     h1{
         animation: doimau 4s ease infinite;
+        font-size: 70px;
     }
     a{
         text-decoration: none
