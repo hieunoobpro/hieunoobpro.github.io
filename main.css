@@ -8,12 +8,16 @@ body{
     padding: 40px;
     min-height: 500px;  
     position: relative;
+
+}
+html{
+    scroll-behavior: smooth;
 }
 .vien{
     border: 10px solid #33e751;
     text-align: center;
     padding: 40px;
-    margin-bottom:30px ;    
+    margin-bottom:30px ;  
 }
 .footer {
     background-color: #b67a7a;
@@ -31,8 +35,7 @@ body{
 .vitrimenu{
     position: absolute;
     left: 0;
-    top: 0 ;
-    
+    top: 0 ;  
 }
 #menu ul {
     background: #0fbd03;
