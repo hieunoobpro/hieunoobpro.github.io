@@ -9,44 +9,20 @@
     <title>Bài tập </title>
 </head>
 <body>
-    <div class="header">      
-           <div class="neon">
-            <font face="Optima" size="25"></font>
+    <div class="header">
+        <h1>
             Gundam
-           </font><br />
-           </div>   
+        </h1>
     </div>
     <input id="box-btn" type="checkbox" style="display:none;">
-    <div class="menu">
-        <h1></h1>
-          <label for="box-btn" class="hamburger">
-            <hr class="bar"></hr>
-            <hr class="bar"></hr>
-            <hr class="bar"></hr>
-          </label>
-          <div class="topnav">
-          <a href="/index.html">Trang chủ </a>
+    <div class="topnav">
+        <a href="/index.html">Trang chủ </a>
         <a href="#">Sản phẩm </a>
         <a href="#">Bình luận</a>
         <a href="#">Diễn đàn</a>
         <a href="#">Tư vấn </a>
     </div>
-      </div>
 </div>
-<div class="wrap">
-    <form action="" class="search" method="post">
-       <input type="text" class="searchTerm" placeholder="Type here">
-       <button type="submit" class="searchButton">
-        <a href="#" style="text-decoration: none;">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Search
-          </a>
-      </button>
-    </form>
- </div>
 <div class="cangiua">
 <div class="bocanh">
     <img src="https://bizweb.dktcdn.net/thumb/large/100/382/833/products/demo1-0c546a64-eb4c-40d9-b628-937a879dd9fe.jpg?v=1673416639707" 
@@ -68,16 +44,5 @@
     <img src="https://bizweb.dktcdn.net/thumb/large/100/382/833/products/demo1-5d815982-0894-4975-8e2c-aa373404f8b4.jpg?v=1622431298520" 
     alt="khong tim thay anh">
  </div>
- <script>
-    $('.hamburger').click(function(){
-    if($('#box-btn').prop('checked') !== true){
-    $(this).find('.bar').css('width', '30px');
-  }
-  else{
-    $(this).find('.bar').removeAttr('style');
-  }
-  
-})
- </script>
 </body>
 </html>

@@ -1,0 +1,106 @@
+body{
+    margin: 0px;   
+}
+.khung{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    min-height: 500px;  
+    position: relative;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.vien{
+    border: 10px solid #33e751;
+    text-align: center;
+    padding: 40px;
+    margin-bottom:30px ;  
+}
+.footer {
+    background-color: #b67a7a;
+    text-align: center;
+    padding: 10px;
+    padding: 15px;
+}
+.header {
+    background-color: dimgrey;
+    color: chartreuse;
+    padding: 5px;
+    text-align: center;
+    margin: 0 ;
+}
+.vitrimenu{
+    position: absolute;
+    left: 0;
+    top: 0 ;  
+}
+#menu ul {
+    background: #0fbd03;
+    width: 250px;
+    height: fit-content;
+    padding: 0;
+    text-align: left;
+    background-color: #ccc;
+    margin: 0;
+  }
+  #menu li {
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0 1em;
+  }
+  #menu li a {
+    text-decoration: #ccc;
+    color: #6d0808;
+    font-weight: bold;
+    display: block;
+  }
+  #menu li:hover {
+    background: #CDE2CD;
+  }
+  /* Mui ten lên dau trang */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    scroll-behavior: smooth;
+    }   
+    #myBtn:hover {
+    background-color: #f1f1f1;  
+    transition: 0.2s;
+    scroll-behavior: smooth;
+    }
+    img:hover{
+        opacity: 0.5 ;
+        transition: all .3s ease;
+    }
+    h2:hover{
+        color: red;
+        transition: all .3s ease;
+        
+    }
+    @keyframes doimau{
+        50%{
+        color: aqua;
+        }
+}
+    h1{
+        animation: doimau 4s ease infinite;
+        font-size: 50px;
+    }
+    a{
+        text-decoration: none
+    }

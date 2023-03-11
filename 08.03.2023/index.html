@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <title>Smart shop</title>
+    <button id="myBtn" title="Lên đầu trang"><img src='len.png' title='lên đầu trang' width='70px' /></button>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > -1 || document.documentElement.scrollTop > -1) {
+                document.getElementById("myBtn").style.display = "block" ;
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        document.getElementById('myBtn').addEventListener("click", function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Smart Shop</h1>
+    </div>
+    <div class="khung">       
+        <div class="vitrimenu">
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Bình luận</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-left: 20px;">
+        <div class="vien">
+            
+            <div class="thu-nghiem-zoom">
+                <a href="#">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-600x600.jpg" width="30%" height="30%"
+            alt="khong tim thay anh">
+        </div>
+            <h2>
+                iPhone 13, 128GB
+            </h2>
+        </a>
+        </div>
+        <div class="vien">
+            <a href="#">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/301641/oppo-reno8t-den1-thumb-600x600.jpg" width="30%"
+            height="30%" alt="khong tim thay anh">
+            <h2>
+                iPhone 12. 128GB
+            </h2>
+        </a>
+        </div>
+        <div class="vien">
+            <a href="#">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/261888/realme-c35-thumb-new-600x600.jpg" width="30%"
+            height="30%" alt="khong tim thay anh">
+            <h2>
+                iPhone 13, 128GB, White - Unlocked (Renewed Premium)
+            </h2>
+        </a>
+        </div>
+            <div class="vien">
+                <a href="#">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-vang-thumb-600x600.jpg" width="30%"
+            height="30%" alt="khong tim thay anh">
+            <h2>
+                iPhone 13 SighPink
+            </h2>
+        </a>
+        </div>
+            <div class="vien">
+                <a href="#">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/233090/Samsung-Galaxy-S21-FE-trang-1-2-600x600.jpg" width="30%"
+            height="30%" alt="khong tim thay anh">
+            <h2>
+                iPhone 13 (Renewed Premium)
+            </h2>
+        </a>
+        </div>
+            <div class="vien">
+                <a href="#">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-600x600.jpg" width="30%" height="30%"
+            alt="khong tim thay anh">
+            <h2>
+                iPhone 11, 128GB, Unlocked (Renewed Premium)
+            </h2>
+        </a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="footer">
+    Create by Nguyễn Duy Hiếu
+</div>
+</body>
+
+</html>
