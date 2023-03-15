@@ -94,4 +94,5 @@
 
         .thu-nghiem-zoom div {
             overflow: hidden;
+            align-items: center;
         }

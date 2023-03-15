@@ -1,79 +1,208 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    background: #888; 
+    font-family: "Lato", Helvetica, Arial;
+	font-size: 16px;
 }
+
 .header {
-        background-color: dimgrey;
-        color: #03e9f4;
-        text-align: center;
-        box-shadow: 0 0px 5px ;
-        padding: 20px;
-} 
-.dndk{
-  display: flex;
-  justify-content: flex-end;
-  margin-top: -75px;
-  height:100px;
-  color:white;  
-  transition: 0.5s;
-  align-items: center;
+    color: #03e9f4;
+    text-align: center;
+    box-shadow: 0 0px 5px;
+    padding: 20px;
+    background-color: antiquewhite;
+    font-style: Arial;
 }
-h2{
+h1{
+font-size: 3rem;
+}
+.menuhbg{
+  box-sizing: border-box;
+  position: fixed;
+  height: 100vh;
+  background-color: rgba(255,255,255, .6);
+  transition: margin .3s linear;
   display: flex;
-  width: 150px;
-  height: 50px;
-  color:white;
+  flex-direction: column;
+  transition: 1s ease;
+}
+.menuhbg ul {
+  padding-inline-start: 0px;
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;   
-  transition: 0.5s;
-  background-color: #00B4CC;
-  border-radius: 2em;
+  transition: 1s ease;
 }
-h2:hover{
-  background: #03e9f4;
-    color: #fff;
-    border-radius: 1em;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+
+.menuhbg li {
+  color: #f1f1f1;
+  position: relative;
+  transition: 1s ease;
+}
+
+.menuhbg ul li>.sub-menuhbg {
+  display: none;
+  position: absolute;
+  transition: 1s ease;
+}
+
+.sub-menuhbg {
+  display: none;
+  position: absolute;
+  transition: 1s ease;
+}
+
+.menuhbg ul li:hover .sub-menuhbg {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.dropbtnhbg {
+  background-color: #ffffff;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  transition: 1s ease;
+}
+
+.dropdownhbg {
+  position: relative;
+  display: inline-block;
+  transition: 1s ease;
+}
+.sub-menuhbg {
+  display: none;
+  position: absolute;
+  transition: 1s ease;
+}
+.dropdown-contenthbg {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+  transition: 1s ease;
+
+}
+.dropdown-contenthbg ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 1s ease;
+}
+.dropdown-contenthbg a {
+  color: black;
+  text-decoration: none;
+  min-width: 120px;
+  text-align: center;
+  transition: 1s ease;
+
+}
+.dropdown-contenthbg a:hover {
+  background-color: #ffffff;
+  text-align: center;
+  transition: 1s ease;
   cursor: pointer;
 }
+.dropdownhbg:hover .dropdown-contenthbg {
+  display: flex;
+  transition: 1s ease;
+  cursor: pointer;
+} 
+.dropdownhbg:hover .dropbtnhbg {
+  background-color:  #ddd;
+  color: rgb(46, 27, 156);
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.topnavmn a {
+  float: left;
+  display: flex;
+  color: #000000;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  transition: 1s ease;
+}
+
+/* thay đổi màu khi di chuột */
+.topnavmn a:hover {
+  background-color: #ddd;
+  color: rgb(46, 27, 156);
+  transition: 1s ease;
+}
+  .bar{
+    transition: 1s;
+  }
+   .bar:hover{
+    width: 200px;
+    transition: 1s ease;}
+
 img {
-    height: 100px;
-    width: 100px;
+    width: 200px;
+    height: 200px;
     margin: 10px;
-    transition: all .3s ease;
+    transition: all .5s ease;
     border: 3px solid #ddd;
 }
-.cangiua{
+.container {
+    position: relative;
+    overflow: hidden;
+  }
+  .overlay {
+    position: absolute; 
+    bottom: 15px; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 125%;
+    transition: 0.5s ease;
+    opacity:0;
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    margin-left: -30px; 
+    overflow: hidden;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+.cangiua {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
 }
+
 .bocanh {
     margin-top: 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 400px;
     align-items: center;
+    max-width: 700px;
 }
 
 img:hover {
     transform: scale(1.4);
     transition: all .3s ease;
     /* cỡ zoom khi di chuột vào */
+    cursor: pointer;
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: rgba(255,255,255, .6);
     width: 100%;
     display: flex;
     justify-content: center;
-    
+    box-shadow: 5px 4px 5px #000;
+
 }
 
 .topnav a {
@@ -89,241 +218,94 @@ img:hover {
 .topnav a:hover {
     background-color: #ddd;
     color: rgb(46, 27, 156);
-}
-.menu{
-  box-sizing: border-box;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  max-width: 550px;
-  height: 95px;
-  background-color: rgba(255,255,255, .6);
-  margin-left: -250px;
-  transition: margin .3s linear;
+    cursor: pointer;
 }
 
-.hamburger
-{
-  display: table;
-  position: absolute;
-  top: 10px;
-  right: -35px;
-  height: 29px;
-  width: 30px;
-  padding: 0;
-  cursor: pointer;
-}
-  .bar{
-    transition: .3s;
-  }
-  hr:first-child
-  {
-    width: 22px;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    margin: 0 0 6px;
-  }
-  hr:nth-child(2)
-  {
-    width: 13px;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    margin: 0 0 6px;
-  }
-  hr:last-child
-  {
-    border: 2px solid #fff;
-    border-radius: 5px;
-    margin: 0;
-  }
-   .bar:hover{
-    width: 30px;}
-#box-btn:checked + div.menu
-{ 
-  margin-left: 0;}
-#box-btn:not(:checked) + div.menu
-{ 
-  transition: .3s;
-  margin-left: -550px;
-}
-.search {
-    margin-top: -210px;
-    width: 100%;
-    position: relative;
-    display: flex;
-  }
-  
-  .searchTerm {
-    width: 100%;
-    border: 3px solid #c1e1e6;
-    border-right: none;
-    padding: 5px;
-    height: 20px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #9DBFAF;
-  }
-  
-  .searchTerm:focus{
-    color: #00B4CC;
-  }
-  
-  .searchButton {
-    width: 100px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
+.menu ul {
+    padding-inline-start: 0px;
+    list-style-type: none;
     text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu li {
+    color: #f1f1f1;
+    position: relative;
+}
+
+.menu ul li>.sub-menu {
+    display: none;
+    position: absolute;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+}
+
+.menu ul li:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
     cursor: pointer;
-    font-size: 20px;
-    transition: 0.5s;
-  }
-  .wrap{
-    width: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .searchButton .user-box label {
-    position: absolute;
-    top:0;
-    left: 0;
-    padding: 10px 0;
+}
+.dropbtn {
+    background-color: #ffffff;
+    padding: 16px;
     font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s;
+    border: none;
+    transition: 0.5s ease;
   }
   
-  .searchButton .user-box input:focus ~ label,
-  .searchButton .user-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #03e9f4;
-    font-size: 12px;
-  }
-  
-  .searchButton form a {
+  .dropdown {
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
-    color: #03e9f4;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 40px;
-    letter-spacing: 4px
+    transition: 0.5s ease;
   }
-  
-  .searchButton a:hover {
-    background: #03e9f4;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-  }
-  
-  .searchButton a span {
+.sub-menu {
+    display: none;
     position: absolute;
-    display: block;
-  }
-  
-  .searchButton a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: btn-anim1 1s linear infinite;
-  }
-  
-  @keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-    50%,100% {
-      left: 100%;
-    }
-  }
-  
-  .searchButton a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: .25s
-  }
-  
-  @keyframes btn-anim2 {
-    0% {
-      top: -100%;
-    }
-    50%,100% {
-      top: 100%;
-    }
-  }
-  
-  .searchButton a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s
-  }
-  
-  @keyframes btn-anim3 {
-    0% {
-      right: -100%;
-    }
-    50%,100% {
-      right: 100%;
-    }
-  }
-  
-  .searchButton a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: .75s
-  }
-  
-  @keyframes btn-anim4 {
-    0% {
-      bottom: -100%;
-    }
-    50%,100% {
-      bottom: 100%;
-    }
-  }
-  .neon 
-{     
-font: normal 30px/normal "Dynalight", Helvetica, sans-serif;  
-color: rgba(255,255,255,1);  
-text-decoration: normal;  
-text-align: center;  
-cursor: pointer;
-text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;  
--webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);  
--moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);  
--o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);  
-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
 }
-.neon:hover 
-{  
-text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    transition: 0.5s ease;
+
+  }
+  .dropdown-content ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.8s ease;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    min-width: 120px;
+    text-align: center;
+    transition: 0.8s ease;
+  }
+  .dropdown-content a:hover {
+    background-color: #ffffff;
+    text-align: center;
+    transition: 0.8s ease;
+    cursor: pointer;
+}
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    transition: 0.8s ease;
+    cursor: pointer;
+} 
+  .dropdown:hover .dropbtn {
+    background-color:  #ddd;
+    color: rgb(46, 27, 156);
+    transition: 0.8s ease;
+    cursor: pointer;
 }
