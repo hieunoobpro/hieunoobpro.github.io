@@ -1,165 +1,41 @@
-const grades = [
-    {name: 'John', grade: 8, sex: 'M'},
-    {name: 'Sarah', grade: 12, sex: 'F'},
-    {name: 'Bob', grade: 16, sex: 'M'},
-    {name: 'Johnny', grade: 2, sex: 'M'},
-    {name: 'Ethan', grade: 4, sex: 'M'},
-    {name: 'Paula', grade: 18, sex: 'F'},
-    {name: 'Donald', grade: 5, sex: 'M'},
-    {name: 'Jennifer', grade: 13, sex: 'F'},
-    {name: 'Courtney', grade: 15, sex: 'F'},
-    {name: 'Jane', grade: 9, sex: 'F'}
-   ]
-   
- // function tính thứ hạng trung bình của cả lớp
-function averageGrade(grades) {
-    let sum = 0;
-    for (let i = 0; i < grades.length; i++) {
-    sum += grades[i].grade;
-    }
-    return sum / grades.length;
-}
-console.log(averageGrade(grades));
+// Bai 1
+const text = document.getElementById("text");
+text.style.color = "#777";
+text.style.fontSize = "2rem";
+text.innerHTML = "Tôi có thể làm <em>bất cứ điều gì</em> tôi muốn với JavaScript.";
 
-// function tính thứ hạng trung bình của nam trong lớp
-function averageMaleGrade(grades) {
-    let sum = 0;
-    let count = 0;
-    for (let i = 0; i < grades.length; i++) {
-    if (grades[i].sex === 'M') {
-    sum += grades[i].grade;
-    count++;
-    }
-    }
-    return sum / count;
+// bai 2
+const li = document.querySelectorAll("li");
+for (let i = 0; i < 3; i++) {
+  li[i].style.color = "blue";
 }
-console.log(averageMaleGrade(grades));
+// bai 3
 
-// Viết function tính thứ hạng trung bình của Nữ trong lớp
-function averageFemaleGrade(grades) {
-    let sum = 0;
-    let count = 0;
-    for (let i = 0; i < grades.length; i++) {
-    if (grades[i].sex === 'F') {
-    sum += grades[i].grade;
-    count++;
-    }
-    }
-    return sum / count;
-}
-console.log(averageFemaleGrade(grades));
+// Thêm 3 thẻ <li> mới vào cuối danh sách
+let list = document.getElementById("list");
+let newLi1 = document.createElement("li");
+newLi1.textContent = "Item 8";
+let newLi2 = document.createElement("li");
+newLi2.textContent = "Item 9";
+let newLi3 = document.createElement("li");
+newLi3.textContent = "Item 10";
+list.appendChild(newLi1);
+list.appendChild(newLi2);
+list.appendChild(newLi3);
 
-//Viết function tìm học viên Nam có thứ hạng cao nhất trong lớp
-function highestMaleGrade(grades) {
-    let highest = null;
-    for (let i = 0; i < grades.length; i++) {
-    if (grades[i].sex === 'M' && (highest === null || grades[i].grade > highest.grade)) {
-    highest = grades[i];
-    }
-    }
-    return highest;
-}
-console.log(highestMaleGrade(grades));
+// Sửa nội dung của thẻ <li> 1 thành màu đỏ
+let firstLi = list.querySelector("li:first-child");
+firstLi.style.color = "red";
 
-// Viết function tìm học viên Nữ có thứ hạng cao nhất trong lớp
-function highestFemaleGrade(grades) {
-    let highest = null;
-    for (let i = 0; i < grades.length; i++) {
-    if (grades[i].sex === 'F' && (highest === null || grades[i].grade > highest.grade)) {
-    highest = grades[i];
-    }
-    }
-    return highest;
-}
-console.log(highestFemaleGrade(grades));
+// Sửa background của thẻ <li> 3 thành màu xanh
+let thirdLi = list.querySelector("li:nth-child(3)");
+thirdLi.style.backgroundColor = "blue";
 
- // Viết function tìm học viên Nam có thứ hạng thấp nhất trong lớp
-function lowestMaleGrade(grades) {
-    let lowest = null;
-    for (let i = 0; i < grades.length; i++) {
-    if (grades[i].sex === 'M' && (lowest === null || grades[i].grade < lowest.grade)) {
-    lowest = grades[i];
-    }
-    }
-    return lowest;
-}
-console.log(lowestMaleGrade(grades));
+// Xóa thẻ <li> 4
+let fourthLi = list.querySelector("li:nth-child(4)");
+fourthLi.remove();
 
-  // Viết function tìm học viên Nữ có thứ hạng thấp nhất trong lớp
-function lowestFemaleGrade(grades) {
-    let lowest = null;
-    for (let i = 0; i < grades.length; i++) {
-    if (grades[i].sex === 'F' && (lowest === null || grades[i].grade < lowest.grade)) {
-    lowest = grades[i];
-    }
-    }
-    return lowest;
-}
-console.log(lowestFemaleGrade(grades));
-
-  // Viết function thứ hạng cao nhất của cả lớp
-function highestGrade(grades) {
-    let highest = null;
-    for (let i = 0; i < grades.length; i++) {
-    if (highest === null || grades[i].grade > highest.grade) {
-    highest = grades[i];
-    }
-    }
-    return highest.grade;
-}
-console.log(highestGrade(grades));
-
-//   Viết function thứ hạng thấp nhất của cả lớp
-function lowestGrade(grades) {
-    let lowest = null;
-    for (let i = 0; i < grades.length; i++) {
-    if (lowest === null || grades[i].grade < lowest.grade) {
-    lowest = grades[i];
-    }
-    }
-    return lowest.grade;
-}
-console.log(lowestGrade(grades));
-
- //  Viết function lấy ra danh sách tất cả học viên Nữ trong lớp
- function getAllFemaleStudents(grades) {
-    let females = [];
-    for (let i = 0; i < grades.length; i++) {
-    if (grades[i].sex === 'F') {
-    females.push(grades[i]);
-    }
-    }
-    return females;
-}
-console.log(getAllFemaleStudents(grades));
-
-  // Function sắp xếp tên học viên theo chiều tăng dần của bảng chữ cái
-function sortByName(grades) {
-    return grades.sort((a, b) => a.name.localeCompare(b.name));
-}
-console.log(sortByName(grades));
-
- // Function sắp xếp thứ hạng học viên theo chiều giảm dần
-function sortByGrade(grades) {
-    return grades.sort((a, b) => b.grade - a.grade);
-}
-console.log(sortByGrade(grades));
-
- // Viết function lấy ra học viên Nữ có tên bắt đầu bằng “J”
-function getFemaleStudentsWithJ(grades) {
-    let students = [];
-    for (let i = 0; i < grades.length; i++) {
-    if (grades[i].sex === 'F' && grades[i].name.startsWith('J')) {
-    students.push(grades[i]);
-       }
-    }
-    return students;
- }
- console.log(getFemaleStudentsWithJ(grades));
-
- // Viết function lấy ra top 5 người có thứ hạng cao nhất trong lớp
-function getTopStudents(grades) {
-    let sortedGrades = sortByGrade(grades);
-    return sortedGrades.slice(0, 5);
-}
-console.log(getTopStudents(grades));
+// Thêm một thẻ <li> mới thay thế cho thẻ <li> 4 đã bị xóa
+let newLi4 = document.createElement("li");
+newLi4.textContent = "This is a new list item";
+list.insertBefore(newLi4, myList.children[3]);
