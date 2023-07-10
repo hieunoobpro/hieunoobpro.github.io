@@ -1,41 +1,49 @@
-// Bai 1
-const text = document.getElementById("text");
-text.style.color = "#777";
-text.style.fontSize = "2rem";
-text.innerHTML = "Tôi có thể làm <em>bất cứ điều gì</em> tôi muốn với JavaScript.";
+/*document.getElementById("btn-2").onclick = changeColor;
+document.getElementById("btn-3").addEventListener("click", changeBackground);
+document.getElementById("btn-1").onclick = changeContent;
+// Function to generate a random HEX color
+function getRandomColor() {
+    return "#" + Math.floor(Math.random() * 16777215).toString(16);
+  }
+  
+  // Function to generate a random RGB color
+  function getRandomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+  
+  // Function to change the content of the target element
+  function changeContent() {
+    document.getElementById("text").innerHTML = "A random quote";
+  }
+  
+  // Function to change the color of the target element
+  function changeColor() {
+    const target = document.getElementById("text");
+    target.style.color = getRandomColor();
+  }
+  
+  // Function to change the background color of the target element
+  function changeBackground() {
+    const target = document.getElementById("text");
+    target.style.backgroundColor = getRandomRGB();
+  }*/
+         // <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nisi debitis enim tempora rerum provident magnam velit corporis! Ipsam voluptatum commodi consectetur molestias sit quod alias ex eius veritatis. Dicta.</p>
 
-// bai 2
-const li = document.querySelectorAll("li");
-for (let i = 0; i < 3; i++) {
-  li[i].style.color = "blue";
-}
-// bai 3
-
-// Thêm 3 thẻ <li> mới vào cuối danh sách
-let list = document.getElementById("list");
-let newLi1 = document.createElement("li");
-newLi1.textContent = "Item 8";
-let newLi2 = document.createElement("li");
-newLi2.textContent = "Item 9";
-let newLi3 = document.createElement("li");
-newLi3.textContent = "Item 10";
-list.appendChild(newLi1);
-list.appendChild(newLi2);
-list.appendChild(newLi3);
-
-// Sửa nội dung của thẻ <li> 1 thành màu đỏ
-let firstLi = list.querySelector("li:first-child");
-firstLi.style.color = "red";
-
-// Sửa background của thẻ <li> 3 thành màu xanh
-let thirdLi = list.querySelector("li:nth-child(3)");
-thirdLi.style.backgroundColor = "blue";
-
-// Xóa thẻ <li> 4
-let fourthLi = list.querySelector("li:nth-child(4)");
-fourthLi.remove();
-
-// Thêm một thẻ <li> mới thay thế cho thẻ <li> 4 đã bị xóa
-let newLi4 = document.createElement("li");
-newLi4.textContent = "This is a new list item";
-list.insertBefore(newLi4, myList.children[3]);
+       //<button id="btn-1">Change content</button>
+       //<button id="btn-2">Change color</button>
+       //<button id="btn-3">Change background</button>
+  const circleContainer = document.getElementById("circle-container");
+  document.body.addEventListener("click", function(event) {
+    const circle = document.createElement("div");
+    circle.style.width = "50px";
+    circle.style.height = "50px";
+    circle.style.borderRadius = "50%";
+    circle.style.backgroundColor = "red";
+    circle.style.position = "absolute";
+    circle.style.top = `${event.clientY - 25}px`;
+    circle.style.left = `${event.clientX - 25}px`;
+    circleContainer.appendChild(circle);
+  });
