@@ -80,7 +80,7 @@ box-shadow: 0 0px 5px;
   margin-top: 50px;
 }
 .canletrang{
-  margin-top: -360px;
+  margin-top: -340px;
   margin-left: 200px;
 }
 .canletrang h2{
@@ -91,7 +91,7 @@ box-shadow: 0 0px 5px;
   margin-left: -400px;
 }
 .canchu{
-  max-width: 600px;
+  max-width: 00px;
 }
 .but{
   display: flex;
@@ -135,8 +135,7 @@ box-shadow: 0 0px 5px;
     display: flex;
     width: 100vw;
     justify-content: center;
-    margin-top: -374px;
-    margin-left: -150px;
+    margin-top: 90px;
 }
 .bocanh {
     margin-top: 50px;
