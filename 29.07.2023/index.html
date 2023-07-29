@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.scrollable-list select {
+  width: 200px;
+  height: auto;
+  max-height: 200px;
+}
+
+.sub-breeds-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-breeds-list li {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.sub-breeds-list li:hover {
+  background-color: #ddd;
+}
+img {
+  max-width: 500px;
+}
+    </style>
+</head>
+<body>
+    <h2>Main Breed List</h2>
+    <div class="scrollable-list">
+      <select id="main-breed-list">
+        <option value="">-- Select a main breed --</option>
+      </select>
+      <button id="get-sub-breeds-btn">Get sub breeds</button>
+    </div>
+    
+    <h2>Sub Breeds List</h2>
+    <div id="sub-breeds-list-container" class="scrollable-list">
+    </div>
+    <button id="get-sub-breed-images-btn">Get sub breed image</button>
+    
+    <h2>Random Sub Breed Image</h2>
+    <div id="random-image-container">
+    </div>
+<script src="/main.js"></script>
+</body>
+</html>
